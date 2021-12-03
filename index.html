@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <header class="container">
+    <h1>spli<br/>tter</h1>
+  </header>
+  <main class="container">
+    <div class="main">
+      <form action="/">
+        <div>
+          <label for="bill">bill</label></br>
+          <span class="bill-span"><input type="text" name="bill" id="bill" placeholder="0">   
+          </span>
+        </div>
+  
+        <div>
+          <label for="tip">select tip %</label></br>
+        <div class="tip">
+          <label><input type="radio" name="tip" value="5"><span>5%</span></label>
+          <label><input type="radio" name="tip" value="10"><span>10%</span></label>
+          <label><input type="radio" name="tip" value="15"><span>15%</span></label>
+          <label><input type="radio" name="tip" value="20"><span>20%</span></label>
+          <label><input type="radio" name="tip" value="25"><span>25%</span></label>
+          <label class="customLabel"><input type="radio" name="tip" value="0" id="customTipRadio"><span class="customSpan"><input type="text" name="customTipInput" id="customTipInput" placeholder="custom"></span></label>
+        </div>
+        </div>
+  
+        <div>
+          <label for="peopleNum">Number of people</label><span class="error">can't be zero</span></br>
+          <span class="people-span"><i class="fas fa-user"></i><input type="text" placeholder="0" id="peopleNum"></span>
+        </div>
+      </form>
+      <div class="results-wrap">
+        <div class="result-tip">
+          <p>tip amount</br><span>/ person</span></p>
+          <p class="result">0.00</p>
+        </div>
+  
+        <div class="result-total">
+          <p>total</br><span>/ person</span></p>
+          <p class="result">0.00</p>
+        </div>
+  
+        <button class="reset" id="reset">reset</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container">
+    <p class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.linkedin.com/in/mariem-ehab-1431301b3"
+        target="_blank"
+        >Mary.E</a
+      >.
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

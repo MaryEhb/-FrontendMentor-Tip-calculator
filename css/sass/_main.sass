@@ -1,0 +1,230 @@
+*
+    padding: 0
+    margin: 0
+    outline: none
+    box-sizing: border-box
+
+body
+    font-family: $fontFamily
+    font-size: $fontSize
+    font-weight: bold
+    color: $DarkGrayishColor1
+    text-transform: capitalize
+    width: 100%
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    background-color: $LightGrayishColor1
+
+main
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+
+h1
+    font-size: inherit
+    text-transform: uppercase
+    letter-spacing: 1rem
+    text-align: center
+
+input
+    font-family: $fontFamily
+    font-size: $fontSize
+
+.container
+    width: 100%
+    max-width: 820px
+    margin: 6vh auto 0
+    padding: 0 1rem
+
+main .main
+    display: flex
+    justify-content: space-between
+    background-color: #fff
+    border-radius: 1rem
+    padding: 2rem
+
+    @media (max-width: 600px)
+        flex-direction: column
+
+form
+    width: 50%
+    padding-right: 2rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @media (max-width: 600px)
+        width: 100%
+        padding: 0
+
+    label
+        font-size: 16px
+        float: left
+
+    input[type="text"]
+        width: 100%
+        border-radius: .35rem
+        border: none
+        background-color: $LightGrayishColor2
+        padding: 0.25rem .75rem
+        text-align: right
+        position: relative
+        color: $VeryDarkColor
+        border: 2px solid #ffffff00
+        transition: all ease-in-out .15s
+
+        &:focus
+            border: 2px solid $color
+
+    .bill-span
+        position: relative
+        &::before
+            content: '$'
+            position: absolute
+            top: 0
+            left: 1rem
+            z-index: 1
+            font-weight: normal
+            opacity: .5
+
+
+    .people-span
+        position: relative
+        i
+            font-size: 18px
+            position: absolute
+            top: .5rem
+            left: 1rem
+            z-index: 1
+            opacity: .5
+
+    div:first-of-type
+        padding-bottom: 1.5rem
+
+    .tip
+        display: grid
+        grid-template-rows: 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr
+        justify-content: stretch
+        align-content: stretch
+        gap: .75rem
+        @media (max-width: 400px)
+            grid-template-rows: 1fr 1fr 1fr
+            grid-template-columns: 1fr 1fr
+
+        #customTipInput
+            margin: 0
+
+        ::placeholder
+            font-size: 20px
+            text-transform: capitalize
+            font-weight: bold
+
+        span
+            display: inline-block
+            width: 100%
+            padding: .5rem
+            background-color: $VeryDarkColor
+            color: #FFF
+            cursor: pointer
+            text-align: center
+            border-radius: .35rem
+            font-size: 20px
+            transition: all ease-in-out 0.15s
+
+            &:hover
+                background-color: $LightGrayishColor1
+                color: $VeryDarkColor
+
+        input[type="radio"]
+            display: none
+            &:checked + span
+                background-color: $color
+                color: $VeryDarkColor
+
+            &:checked + .customSpan
+                background: none
+
+        .customLabel
+            background: none
+
+        .customSpan
+            background: none
+            padding: 0
+
+    .error
+        display: none
+
+    .zeroPeople
+        input
+            border-color: rgb(204, 96, 101)
+
+        .error
+            color: rgb(204, 96, 101)
+            display: inline-block
+            font-size: 12px
+            float: right
+
+.results-wrap
+    width: 50%
+    background-color: $VeryDarkColor
+    padding: 2rem
+    border-radius: 1rem
+    color: #fff
+    font-weight: bold
+    font-size: 16px
+    display: flex
+    flex-direction: column
+
+    @media (max-width: 600px)
+        width: 100%
+        margin-top: 2rem
+
+    div
+        display: flex
+        justify-content: space-between
+        padding-bottom: 2rem
+
+        span
+            color: $DarkGrayishColor1
+            font-size: 12px
+
+    .result
+        color: $color
+        font-size: 35px
+        &::before
+            content: '$'
+
+        @media (max-width: 600px)
+            font-size: 26px
+
+    .result-total
+        flex: 1
+
+    .reset
+        width: 100%
+        padding: .5rem
+        text-transform: uppercase
+        background-color: $color
+        color: $VeryDarkColor
+        font-size: 16px
+        font-weight: bold
+        letter-spacing: .05rem
+        border: none
+        border-radius: .25rem
+        transition: all ease-in-out .2s
+        cursor: pointer
+        &:hover
+            background-color: $LightGrayishColor1
+
+        &:disabled
+            opacity: .25
+            cursor: not-allowed
+            &:hover
+                background-color: $color
+
+footer
+    text-align: center
+    padding: .5rem
+    font-size: 18px
