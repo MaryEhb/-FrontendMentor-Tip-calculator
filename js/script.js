@@ -87,6 +87,8 @@ const reset = () => {
   resetBtn.disabled = true;
 };
 
+reset();
+
 /* Event Listeners */
 
 allInputs.forEach((inp) => {
